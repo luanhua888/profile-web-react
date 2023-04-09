@@ -7,8 +7,8 @@ import { faUserFriends } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
   return (
-    <div className="pt-4 pl-4 pb-4">
-      <div className="container pb-[120%]  ">
+    <div className=" h-screen   lg:py-6 ">
+      <div className="  h-full w-full bg-[#5b6b54] rounded-2xl shadow-2xl shadow-gray-400 ">
         {/* avatar */}
         <div className=" flex justify-center items-center pt-5 ">
           <img
@@ -17,28 +17,31 @@ function Navbar() {
             https://scontent.fsgn5-12.fna.fbcdn.net/v/t39.30808-6/272988425_637138334247270_892214224820100350_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=0ZcKFgFry9UAX-6ZUIf&_nc_ht=scontent.fsgn5-12.fna&oh=00_AfA0OANG3Ipo4WKj0t6c3ZqRRzBvQwLjvSRRwcqLIskVDg&oe=64387D23
             "
             alt=""
-            className="rounded-full h-20 w-20 border p-[2px]"
+            className="rounded-full h-40 w-40 border p-[2px]"
           />
         </div>
 
         {/* name */}
 
-        <h1 className=" p-4  font-bold justify-center items-center flex">
+        <h1 className=" p-4  font-bold justify-center items-center flex text-2xl text-[#eae8db]">
           Hứa Minh Luân
         </h1>
 
-        <button className="px-4 py-2 font-bold justify-start items-center flex w-full hover:bg-[#c0caba]">
-          <FontAwesomeIcon icon={faHouse} className="flex justify-center items-center" />
-          <p className="pl-4">Home</p>
+        <button className="flex pl-10 py-4 justify-start items-center text-2xl text-[#eae8db] w-full hover:bg-[#e8ede4] hover:text-[#5b6b54]">
+          <FontAwesomeIcon
+            icon={faHouse}
+            className="flex justify-center items-center"
+          />
+          <p className="px-4">Home</p>
         </button>
 
-        <button className="px-4 py-2 font-bold justify-start items-center flex w-full hover:bg-[#c0caba]">
+        <button className="flex pl-10 py-4 justify-start items-center text-2xl text-[#eae8db] w-full hover:bg-[#e8ede4] hover:text-[#5b6b54]">
           <FontAwesomeIcon icon={faUser} className="" />
-          <p className="pl-4">About</p>
+          <p className="px-4">About</p>
         </button>
-        <button className="px-4 py-2 font-bold justify-start items-center flex w-full hover:bg-[#c0caba]">
+        <button className="flex pl-10 py-4 justify-start items-center text-2xl text-[#eae8db] w-full hover:bg-[#e8ede4] hover:text-[#5b6b54]">
           <FontAwesomeIcon icon={faUserFriends} className="" />
-          <p className="pl-4">Contact</p>
+          <p className="px-3">Contact</p>
         </button>
       </div>
     </div>
