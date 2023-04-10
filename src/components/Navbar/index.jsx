@@ -4,11 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faUserFriends } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <div className=" h-screen   lg:py-6 ">
-      <div className="  h-full w-full bg-[#5b6b54] rounded-2xl shadow-2xl shadow-gray-400 ">
+      <div className="  h-full w-full bg-[#5b6b54] rounded-2xl shadow-xl shadow-gray-500 ">
         {/* avatar */}
         <div className=" flex justify-center items-center pt-5 ">
           <img
@@ -27,22 +28,31 @@ function Navbar() {
           Hứa Minh Luân
         </h1>
 
-        <button className="flex pl-10 py-4 justify-start items-center text-2xl text-[#eae8db] w-full hover:bg-[#e8ede4] hover:text-[#5b6b54]">
+        <Link
+          className="flex pl-10 py-4 justify-start items-center text-2xl text-[#eae8db] w-full hover:bg-[#e8ede4] hover:text-[#5b6b54]"
+          to={"/"}
+        >
           <FontAwesomeIcon
             icon={faHouse}
             className="flex justify-center items-center"
           />
           <p className="px-4">Home</p>
-        </button>
+        </Link>
 
-        <button className="flex pl-10 py-4 justify-start items-center text-2xl text-[#eae8db] w-full hover:bg-[#e8ede4] hover:text-[#5b6b54]">
+        <Link
+          className="flex pl-10 py-4 justify-start items-center text-2xl text-[#eae8db] w-full hover:bg-[#e8ede4] hover:text-[#5b6b54]"
+          to={"/about"}
+        >
           <FontAwesomeIcon icon={faUser} className="" />
           <p className="px-4">About</p>
-        </button>
-        <button className="flex pl-10 py-4 justify-start items-center text-2xl text-[#eae8db] w-full hover:bg-[#e8ede4] hover:text-[#5b6b54]">
+        </Link>
+        <Link
+          className="flex pl-10 py-4 justify-start items-center text-2xl text-[#eae8db] w-full hover:bg-[#e8ede4] hover:text-[#5b6b54]"
+          to={"/contact"}
+        >
           <FontAwesomeIcon icon={faUserFriends} className="" />
           <p className="px-3">Contact</p>
-        </button>
+        </Link>
       </div>
     </div>
   );
