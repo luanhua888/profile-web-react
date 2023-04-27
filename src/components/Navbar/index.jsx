@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Navbar/style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
@@ -7,22 +7,45 @@ import { faUserFriends } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+  const [fileAvt, setFileAvt] = useState(
+    "https://i.pinimg.com/564x/f2/9e/d6/f29ed68554a4d63677fe7a90dd1b6fd7.jpg"
+  );
+
   return (
     <div className=" h-screen   lg:py-6 ">
       <div className="  h-full w-full bg-[#5b6b54] rounded-2xl shadow-xl shadow-gray-500 ">
-        {/* avatar */}
-        <div className=" flex justify-center items-center pt-5 ">
+        {/* avatar can update  */}
+        <div
+          className=" flex flex-col justify-center items-center pt-5 
+        "
+        >
           <img
-            //  random image
-            src="
-            https://scontent.fsgn5-12.fna.fbcdn.net/v/t39.30808-6/272988425_637138334247270_892214224820100350_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=0ZcKFgFry9UAX-6ZUIf&_nc_ht=scontent.fsgn5-12.fna&oh=00_AfA0OANG3Ipo4WKj0t6c3ZqRRzBvQwLjvSRRwcqLIskVDg&oe=64387D23
-            "
+            src={fileAvt}
             alt=""
-            className="rounded-full h-40 w-40 border p-[2px]"
+            className="rounded-full h-40 w-40 border p-[2px] bg-cover"
+            onClick={() => {
+              const inputFile = document.querySelector("input[type=file]");
+              inputFile.click();
+            }}
           />
+          {/* chọn file ảnh từ máy tính */}
+          <div className="flex  justify-center items-center">
+            <input
+              type="file"
+              name=""
+              id=""
+              className="hidden"
+              onChange={(e) => {
+                const file = e.target.files[0];
+                const fileReader = new FileReader();
+                fileReader.readAsDataURL(file);
+                fileReader.onload = () => {
+                  setFileAvt(fileReader.result);
+                };
+              }}
+            />
+          </div>
         </div>
-
-        {/* name */}
 
         <h1 className=" p-4  font-bold justify-center items-center flex text-2xl text-[#eae8db]">
           Hứa Minh Luân

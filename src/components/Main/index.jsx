@@ -68,7 +68,7 @@ function Main() {
             placeholder="Search"
             className="bg-[#d2cdb0] text-[#5b6b54] rounded-full w-[60%] px-2 py-2 outline-none"
           />
-          <button className="bg-[#5b6b54] text-[#eae8db] rounded-full px-4 py-2 gap-2 outline-none flex items-center justify-center">
+          <button className="bg-[#5b6b54] text-[#eae8db] rounded-full px-4 py-2 gap-2 outline-none flex items-center justify-center hover:bg-[#2e382a]">
             <FontAwesomeIcon icon={faSearch} className="text-2xl" />
             Search
           </button>
