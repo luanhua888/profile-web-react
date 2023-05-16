@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faUserFriends } from "@fortawesome/free-solid-svg-icons";
+import { faFish } from "@fortawesome/free-solid-svg-icons";
+import { faFire } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -69,6 +71,7 @@ function Navbar() {
           <FontAwesomeIcon icon={faUser} className="" />
           <p className="px-4">About</p>
         </Link>
+
         <Link
           className="flex pl-10 py-4 justify-start items-center text-2xl text-[#eae8db] w-full hover:bg-[#e8ede4] hover:text-[#5b6b54]"
           to={"/contact"}
@@ -76,6 +79,38 @@ function Navbar() {
           <FontAwesomeIcon icon={faUserFriends} className="" />
           <p className="px-3">Contact</p>
         </Link>
+
+        <Link
+          className="flex pl-10 py-4 justify-start items-center text-2xl text-[#eae8db] w-full hover:bg-[#e8ede4] hover:text-[#5b6b54]"
+          to={"/"}
+          onClick={() => {
+            const dropdownUtil = document.querySelector(".dropdown-util");
+            dropdownUtil.classList.toggle("hidden");
+          }}
+        >
+          <FontAwesomeIcon icon={faFish} className="" />
+          <p className="px-3">Utilities</p>
+        </Link>
+
+        {/* dropdown */}
+        <div className="dropdown-util ">
+          <Link
+            className="flex pl-[20%] py-4 justify-start items-center text-2xl text-[#eae8db] w-full hover:bg-[#e8ede4] hover:text-[#5b6b54] "
+            to={"/slider"}
+          >
+            <FontAwesomeIcon icon={faFire} className="" />
+            <p className="px-3">Slider</p>
+          </Link>
+
+          
+          <Link
+            className="flex pl-[20%] py-4 justify-start items-center text-2xl text-[#eae8db] w-full hover:bg-[#e8ede4] hover:text-[#5b6b54] "
+            to={"/slider"}
+          >
+            <FontAwesomeIcon icon={faFire} className="" />
+            <p className="px-3">Slider</p>
+          </Link>
+        </div>
       </div>
     </div>
   );
