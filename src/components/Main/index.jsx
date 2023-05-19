@@ -4,8 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faBell, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-import avt1 from "../../assets/1.jpg";
-import avt2 from "../../assets/2.jpg";
 import avt3 from "../../assets/3.jpg";
 import avt4 from "../../assets/4.jpg";
 import avt5 from "../../assets/5.jpg";

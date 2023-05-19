@@ -6,6 +6,7 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faUserFriends } from "@fortawesome/free-solid-svg-icons";
 import { faFish } from "@fortawesome/free-solid-svg-icons";
 import { faFire } from "@fortawesome/free-solid-svg-icons";
+import { faMap } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -102,13 +103,12 @@ function Navbar() {
             <p className="px-3">Slider</p>
           </Link>
 
-          
           <Link
             className="flex pl-[20%] py-4 justify-start items-center text-2xl text-[#eae8db] w-full hover:bg-[#e8ede4] hover:text-[#5b6b54] "
-            to={"/slider"}
+            to={"/map"}
           >
-            <FontAwesomeIcon icon={faFire} className="" />
-            <p className="px-3">Slider</p>
+            <FontAwesomeIcon icon={faMap} className="" />
+            <p className="px-3">Map</p>
           </Link>
         </div>
       </div>

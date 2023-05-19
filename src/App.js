@@ -6,7 +6,7 @@ import Skill from "./pages/Skill";
 import Experient from "./pages/Experient";
 import Contact from "./pages/Contact";
 import Slider from "./pages/SliderShow";
-
+import Map from "./pages/MapPage";
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
             <Route path="/experient" element={<Experient />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/slider" element={<Slider />} />
+            <Route path="/map" element={<Map />} />
           </Routes>
         </div>
       </div>

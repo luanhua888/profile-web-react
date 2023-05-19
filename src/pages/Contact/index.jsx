@@ -48,17 +48,14 @@ function Contact() {
               @luanbanhxeo0
             </a>
           </div>
-
-
-            {/* github */}
-         
-
-
-
         </div>
-        <button className=" flex justify-center items-center rounded-xl px-8 py-4 
+        <button
+          className=" flex justify-center items-center rounded-xl px-8 py-4 
         hover:bg-[#293126] hover:text-[#eaf5d6] shadow-xl   
-        text-2xl font-bold mt-4 bg-[#eaf5d6] ">Follow</button>
+        text-2xl font-bold mt-4 bg-[#eaf5d6] "
+        >
+          Follow
+        </button>
       </div>
     </div>
   );
